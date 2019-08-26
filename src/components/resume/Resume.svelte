@@ -124,7 +124,7 @@
           <ul class="tags ">
             {#each skills_tags.advanced as { name }}
               <li>
-                <a href="#" class="tag tag_1">{name}</a>
+                <a href="##" class="tag tag_1">{name}</a>
               </li>
             {/each}
 
@@ -139,7 +139,7 @@
           <ul class="tags">
             {#each skills_tags.intermediate as { name }}
               <li>
-                <a href="#" class="tag tag_2">{name}</a>
+                <a href="##"   class="tag tag_2">{name}</a>
               </li>
             {/each}
 
@@ -154,7 +154,7 @@
           <ul class="tags">
             {#each skills_tags.hobby as { name }}
               <li>
-                <a href="#" class="tag tag_3">{name}</a>
+                <a href="##"  class="tag tag_3">{name}</a>
               </li>
             {/each}
 

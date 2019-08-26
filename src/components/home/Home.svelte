@@ -32,10 +32,10 @@
       <div class="col-md-3 col-sm-12">
         <div class="row justify-content-center">
           <div class="col-auto">
-            <img
+            <img alt="Image"
               class="profile-pic"
               src={profilepic}
-              alt="Tim Baker Profile Pic" />
+               />
           </div>
         </div>
 

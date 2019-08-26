@@ -9,7 +9,8 @@
     email,
     phone,
     image,
-    social
+    social,
+    work_at
   } = content_app.main;
   const { city, state, country, zip, street } = address;
 
@@ -42,14 +43,14 @@
 
   <div class="profile-card js-profile-card">
     <div class="profile-card__img">
-      <img src={profilepic} alt="profile card" />
+      <img alt="Image" src={profilepic}  />
     </div>
 
     <div class="profile-card__cnt js-profile-cnt">
       <div class="profile-card__name">{name}</div>
       <div class="profile-card__txt">
         {occupation} at
-        <strong>{'...'}</strong>
+        <strong>{work_at}</strong>
       </div>
       <div class="profile-card-loc">
         <span class="profile-card-loc__icon">

@@ -87,7 +87,7 @@ pre {
    word-wrap: break-word;
 }
 
-blockquote, q { quotes: &#8220 &#8220; }
+blockquote, q { quotes: #8220 #8220; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -143,7 +143,7 @@ html {
 
 body {
    background: #fff;
-   /*  /*font-family: 'Hammersmith One', sans-serif;*/*/
+   /*font-family: 'Hammersmith One', sans-serif;*/
    font-weight: normal;
    font-size: 15px;
    line-height: 30px;

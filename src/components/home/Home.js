@@ -2,6 +2,7 @@
 export let content_app = {
   main: {
     name: 'Roberto Batty',
+    work_at: '...',
     occupation: 'Software Developer',
     description:
       'Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer',
