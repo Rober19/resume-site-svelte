@@ -6,6 +6,8 @@
   import Portafolio from "./components/portafolio/Portafolio.svelte";
 </script>
 
+<style src="./App.scss"></style>
+
 <div>
   <!-- <Header /> -->
   <Nav />
