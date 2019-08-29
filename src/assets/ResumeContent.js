@@ -78,13 +78,21 @@ export const content_app = {
     show_education: true,
     show_work: true,
     skillmessage: 'Aquí un estimado de estas habilidades primordiales',
+    skills_title: 'Destrezas',
     education_title: 'Educación',
     work_title: 'Experiencia',
     education: [
       {
         school: 'Tecnologíco Comfenalco',
+        degree: 'Ingeniería de Sistemas',
+        graduated: '2020 - 2021 (Pendiente)',
+        description:
+          '... ',
+      },
+      {
+        school: 'Tecnologíco Comfenalco',
         degree: 'Tecnología en Desarrollo de Software',
-        graduated: '2017 - 2021',
+        graduated: '2017 - 2019 (Cursando)',
         description:
           '... ',
       },
@@ -117,31 +125,31 @@ export const content_app = {
     skills: [
       {
         name: 'Git',
-        level: '60%',
-      },
-      {
-        name: 'Node.js',
         level: '55%',
       },
       {
+        name: 'Node.js',
+        level: '70%',
+      },
+      {
         name: 'Typescript',
-        level: '50%',
+        level: '60%',
       },
       {
         name: 'Java',
-        level: '90%',
+        level: '60%',
       },
       {
         name: 'HTML5',
-        level: '80%',
-      },
-      {
-        name: 'Js',
         level: '50%',
       },
       {
+        name: 'Js',
+        level: '60%',
+      },
+      {
         name: 'CSS',
-        level: '80%',
+        level: '45%',
       },
       {
         name: 'MongoDB',
@@ -149,7 +157,7 @@ export const content_app = {
       },
       {
         name: 'SQL',
-        level: '40%',
+        level: '50%',
       },
     ],
     skills_tags_titles: {

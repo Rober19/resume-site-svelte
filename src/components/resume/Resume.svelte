@@ -14,6 +14,7 @@
     show_work,
     show_skills_tags,
     show_skills,
+    skills_title,
     skills_tags_titles
   } = content_app.resume;
 </script>
@@ -89,7 +90,7 @@
 
         <div class="three columns header-col">
           <h1>
-            <span>Skills</span>
+            <span>{skills_title}</span>
           </h1>
         </div>
 
