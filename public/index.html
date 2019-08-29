@@ -17,6 +17,14 @@
     <script src="https://kit.fontawesome.com/5fff11328d.js"></script>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js"></script> -->
+    <script>
+      const { host, protocol, href } = window.location;
+      if (!host.includes("localhost") && protocol === "http:") {
+        const urlHandler = href.split("http:");
+        const url = "https:" + urlHandler[1];
+        window.location.replace(url);
+      }
+    </script>
 
     <link
       href="https://fonts.googleapis.com/css?family=Hammersmith+One|Libre+Barcode+128+Text|Quicksand|Libre+Baskerville|Lexend+Deca&display=swap"
