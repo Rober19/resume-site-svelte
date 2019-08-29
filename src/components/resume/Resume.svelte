@@ -1,5 +1,5 @@
 ﻿<script>
-  import { content_app } from "../../assets/ResumeContent";
+  import { content_app, db_content } from "../../assets/ResumeContent";
 
   // let show_content = content_app.resume;
   let {
@@ -31,7 +31,7 @@
         <div class="three columns header-col">
           <h1>
 
-            <span>{education_title}</span>
+            <span>{$db_content.resume.education_title}</span>
           </h1>
         </div>
 
@@ -39,7 +39,7 @@
           <div class="row item">
             <div class="twelve columns">
 
-              {#each education as { degree, school, graduated, description }, i}
+              {#each $db_content.resume.education as { degree, school, graduated, description }, i}
                 <div key={i}>
                   <h3>{school}</h3>
                   <p class="info">
@@ -62,13 +62,13 @@
 
         <div class="three columns header-col">
           <h1>
-            <span>{work_title}</span>
+            <span>{$db_content.resume.work_title}</span>
           </h1>
         </div>
 
         <div class="nine columns main-col">
 
-          {#each work as { company, title, years, description }, i}
+          {#each $db_content.resume.work as { company, title, years, description }, i}
             <div key={company}>
               <h3>{company}</h3>
 
@@ -90,17 +90,17 @@
 
         <div class="three columns header-col">
           <h1>
-            <span>{skills_title}</span>
+            <span>{$db_content.resume.skills_title}</span>
           </h1>
         </div>
 
         <div class="nine columns main-col">
 
-          <p>{skillmessage}</p>
+          <p>{$db_content.resume.skillmessage}</p>
 
           <div class="bars">
             <ul class="skills">
-              {#each skills as { name, className, level }, i}
+              {#each $db_content.resume.skills as { name, className, level }, i}
                 <li key={name}>
                   <span
                     style=" width: {level}
@@ -121,19 +121,19 @@
           <center>
             <div>
               <h1 style="font-size: 25px">
-                {skills_tags_titles.title_1}
+                {$db_content.resume.skills_tags_titles.title_1}
               </h1>
             </div>
           </center>
 
           <div class="header-col">
             <h1>
-              <span>{skills_tags_titles.lvl_1}</span>
+              <span>{$db_content.resume.skills_tags_titles.lvl_1}</span>
             </h1>
           </div>
 
           <ul class="tags ">
-            {#each skills_tags.advanced as { name }}
+            {#each $db_content.resume.skills_tags.advanced as { name }}
               <li>
                 <a href="##" class="tag tag_1">{name}</a>
               </li>
@@ -143,12 +143,12 @@
 
           <div class="header-col">
             <h1>
-              <span>{skills_tags_titles.lvl_2}</span>
+              <span>{$db_content.resume.skills_tags_titles.lvl_2}</span>
             </h1>
           </div>
 
           <ul class="tags">
-            {#each skills_tags.intermediate as { name }}
+            {#each $db_content.resume.skills_tags.intermediate as { name }}
               <li>
                 <a href="##" class="tag tag_2">{name}</a>
               </li>
@@ -158,12 +158,12 @@
 
           <div class="header-col">
             <h1>
-              <span>{skills_tags_titles.lvl_3}</span>
+              <span>{$db_content.resume.skills_tags_titles.lvl_3}</span>
             </h1>
           </div>
 
           <ul class="tags">
-            {#each skills_tags.hobby as { name }}
+            {#each $db_content.resume.skills_tags.hobby as { name }}
               <li>
                 <a href="##" class="tag tag_3">{name}</a>
               </li>

@@ -1,5 +1,6 @@
 <script>
-  import { content_app } from "../../assets/ResumeContent";
+  import { content_app, setLanguaje, getLanguaje, db_content } from "../../assets/ResumeContent";
+  
 
   const {
     name,
@@ -10,7 +11,8 @@
     phone,
     image,
     social,
-    work_at
+    work_at,
+    word_at
   } = content_app.main;
   const { city, state, country, zip, street } = address;
 
@@ -34,6 +36,7 @@
   //   });
   // });
 
+
 </script>
 
 <style src="./Presentation.scss">
@@ -50,8 +53,7 @@
     <div class="profile-card__cnt js-profile-cnt">
       <div class="profile-card__name">{name}</div>
       <div class="profile-card__txt">
-        {occupation} at
-        <strong>{work_at}</strong>
+        {$db_content.main.occupation} {$db_content.main.word_at} <strong>{$db_content.main.work_at}</strong>
       </div>
       <div class="profile-card-loc">
         <span class="profile-card-loc__icon">
@@ -99,11 +101,11 @@
 
       </div>
 
-      <div class="profile-card-ctr" style="display: none">
-        <button class="profile-card__button button--blue js-message-btn">
-          Message
+      <div class="profile-card-ctr" >
+        <button class="profile-card__button button--blue js-message-btn" on:click={db_content.useEsp}>
+          Español
         </button>
-        <button class="profile-card__button button--orange">Follow</button>
+        <button class="profile-card__button button--orange"  on:click={db_content.useEng}>English</button>
       </div>
     </div>
 
