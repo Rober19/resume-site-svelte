@@ -113,7 +113,7 @@ let spanish = {
         years: '2018 - Present',
         description:
           // 'Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.',
-          'Proyectos de fuerte arquitectura, usando Java, PHP, JavaScript (NodeJS, Vue, Angular), apollados sobre bases SQL y NoSQL',
+          'Proyectos de fuerte arquitectura, usando Java, PHP, JavaScript (NodeJS, Vue, Angular), apollados sobre bases SQL, NoSQL y plataformas como Heroku, Google Cloud, Firebase',
       },
       // {
       //   company: 'Super Cool Studio',
