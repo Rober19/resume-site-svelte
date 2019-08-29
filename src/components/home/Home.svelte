@@ -1,5 +1,5 @@
 ﻿<script>
-  import { content_app } from "./Home";
+  import { content_app } from "../../assets/ResumeContent";
 
   const { name, occupation, bio, address,  email, phone  } = content_app.main;
   const { city, state, country, zip, street} = address;

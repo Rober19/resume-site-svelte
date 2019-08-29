@@ -4,16 +4,18 @@
   import Header from "./components/header/Header.svelte";
   import Resume from "./components/resume/Resume.svelte";
   import Portafolio from "./components/portafolio/Portafolio.svelte";
+  import Presentation from "./components/presentation/Presentation.svelte";
 </script>
 
 <!-- <style src="./App.scss"></style> -->
 
 <div>
   <!-- <Header /> -->
-  <Nav />
+  <!-- <Nav /> -->
+  <Presentation />
   <!-- <Home /> -->
 
   <Resume />
 
-    <Portafolio/>
+    <!-- <Portafolio/> -->
 </div>

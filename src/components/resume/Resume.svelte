@@ -1,12 +1,21 @@
 ﻿<script>
-  import { content_app } from "../home/Home";
+  import { content_app } from "../../assets/ResumeContent";
 
-  let skillmessage = content_app.resume.skillmessage;
-  let education = content_app.resume.education;
-  let work = content_app.resume.work;
-  let skills = content_app.resume.skills;
-  let skills_tags = content_app.resume.skills_tags;
-  let show_content = content_app.resume;
+  // let show_content = content_app.resume;
+  let {
+    work_title,
+    education_title,
+    skills_tags,
+    skills,
+    work,
+    education,
+    skillmessage,
+    show_education,
+    show_work,
+    show_skills_tags,
+    show_skills,
+    skills_tags_titles
+  } = content_app.resume;
 </script>
 
 <style src="./Resume.scss">
@@ -16,12 +25,12 @@
 <div class="container">
   <section id="resume">
 
-    {#if show_content.show_eduction}
+    {#if show_education}
       <div class="row education">
         <div class="three columns header-col">
           <h1>
 
-            <span>Education</span>
+            <span>{education_title}</span>
           </h1>
         </div>
 
@@ -47,12 +56,12 @@
       </div>
     {/if}
 
-    {#if show_content.show_work}
+    {#if show_work}
       <div class="row work">
 
         <div class="three columns header-col">
           <h1>
-            <span>Work</span>
+            <span>{work_title}</span>
           </h1>
         </div>
 
@@ -75,7 +84,7 @@
       </div>
     {/if}
 
-    {#if show_content.show_skills}
+    {#if show_skills}
       <div class="row skill">
 
         <div class="three columns header-col">
@@ -105,19 +114,20 @@
         </div>
       </div>
     {/if}
-    {#if show_content.show_skills_tags}
+    {#if show_skills_tags}
       <div class="row">
         <div class="col-md-12">
-      <center>
-          <div >
-            <h1 style="font-size: 25px">
-              {show_content.skills_tags_titles.title_1}
-            </h1>
-          </div></center>
+          <center>
+            <div>
+              <h1 style="font-size: 25px">
+                {skills_tags_titles.title_1}
+              </h1>
+            </div>
+          </center>
 
           <div class="header-col">
             <h1>
-              <span>{show_content.skills_tags_titles.lvl_1}</span>
+              <span>{skills_tags_titles.lvl_1}</span>
             </h1>
           </div>
 
@@ -132,14 +142,14 @@
 
           <div class="header-col">
             <h1>
-              <span>{show_content.skills_tags_titles.lvl_2}</span>
+              <span>{skills_tags_titles.lvl_2}</span>
             </h1>
           </div>
 
           <ul class="tags">
             {#each skills_tags.intermediate as { name }}
               <li>
-                <a href="##"   class="tag tag_2">{name}</a>
+                <a href="##" class="tag tag_2">{name}</a>
               </li>
             {/each}
 
@@ -147,14 +157,14 @@
 
           <div class="header-col">
             <h1>
-              <span>{show_content.skills_tags_titles.lvl_3}</span>
+              <span>{skills_tags_titles.lvl_3}</span>
             </h1>
           </div>
 
           <ul class="tags">
             {#each skills_tags.hobby as { name }}
               <li>
-                <a href="##"  class="tag tag_3">{name}</a>
+                <a href="##" class="tag tag_3">{name}</a>
               </li>
             {/each}
 
