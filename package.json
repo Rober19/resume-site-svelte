@@ -15,6 +15,11 @@
     "svelte-preprocess-sass": "^0.2.0"
   },
   "dependencies": {
+    "@hapi/joi": "^15.1.1",
+    "amanda": "^1.0.1",
+    "celebrate": "^10.0.1",
+    "joi": "^14.3.1",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-scss": "^1.0.2",
     "sirv-cli": "^0.4.4"
   },
@@ -23,8 +28,8 @@
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
     "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev"  ,
-    "gp": "deployghp.bat"  
+    "start:dev": "sirv public --single --dev",
+    "gp": "deployghp.bat"
   },
   "engines": {
     "node": "10"

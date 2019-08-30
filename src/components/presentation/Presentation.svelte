@@ -1,5 +1,5 @@
 <script>
-  import { content_app, setLanguaje, getLanguaje, db_content } from "../../assets/ResumeContent";
+  import { content_app, db_content } from "../../assets/ResumeContent";
   
 
   const {
