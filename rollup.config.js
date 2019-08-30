@@ -6,7 +6,6 @@ import { terser } from 'rollup-plugin-terser';
 import autoPreprocess from 'svelte-preprocess';
 import { scss } from 'svelte-preprocess';
 import json from 'rollup-plugin-json';
-import Joi from 'joi';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -20,7 +19,6 @@ export default {
   },
   entry: 'main.js',
   dest: 'bundle.js',
-  external: ['Joi'],
   plugins: [
     svelte({
       // enable run-time checks when not in production

@@ -90,7 +90,7 @@
       <div class="profile-card-social">
 
         {#each social as { name, className, url, icon, iconclass }}
-          <a href={url} class={className} target="_blank">
+          <a href={url} class={className} target="_blank" aria-label="123" rel="noreferrer">
             <span class="icon-font">
               <svg class="icon">
                 <use xlink:href={icon} />
