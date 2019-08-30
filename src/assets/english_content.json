@@ -1,0 +1,168 @@
+{
+  "main": {
+    "name": "Roberto Batty",
+    "work_at": "Overseas Solutions",
+    "occupation": "Software Developer",
+    "word_at": " at ",
+    "image": "profilepic.jpg",
+    "email": "roberbatty@gmail.com",
+    "phone": "##",
+    
+    "address": {
+      "street": "",
+      "city": "Cartagena",
+      "state": "Bolivar",
+      "country": "Colombia",
+      "zip": "130014"   
+    },
+    "website": "##",
+    "resumedownload": null,
+    "social": [
+      {
+        "name": "twitter",
+        "url": "http://twitter.com/_rober19",
+        "className": "profile-card-social__item link",
+        "icon": "#icon-twitter"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/robertobatty/",
+        "className": "profile-card-social__item facebook",
+        "icon": "#linkedin"
+      },
+      {
+        "name": "github",
+        "url": "http://github.com/rober19",
+        "className": "profile-card-social__item instagram",
+        "icon": "#icon-github"
+      }
+    ]
+  },
+  "resume": {
+    "show_skills": true,
+    "show_skills_tags": true,
+    "show_education": true,
+    "show_work": true,
+    "skillmessage": "...",
+    "skills_title": "Skills",
+    "education_title": "Education",
+    "work_title": "Work",
+    "education": [
+      {
+        "school": "Tecnologíco Comfenalco",
+        "degree": "Systems Engineering Degree",
+        "graduated": "2020 - 2021 (Pending)",
+        "description": "... "
+      },
+      {
+        "school": "Tecnologíco Comfenalco",
+        "degree": "Software Development Technology",
+        "graduated": "2017 - 2019 (Present)",
+        "description": "... "
+      },
+      {
+        "school": "Colegío Mixto La Popa",
+        "degree": "Bachelor Degree",
+        "graduated": "November 2016",
+        "description": "..."
+      }
+    ],
+    "work": [
+      {
+        "company": "Overseas Solutions",
+        "title": "Software Developer",
+        "years": "2018 - Present",
+        "description": "..."
+      }
+    ],
+    "skills": [
+      { "name": "Git", "level": "55%" },
+      { "name": "Node.js", "level": "70%" },
+      { "name": "Typescript", "level": "60%" },
+      { "name": "Java", "level": "60%" },
+      { "name": "HTML5", "level": "50%" },
+      { "name": "Js", "level": "60%" },
+      { "name": "CSS", "level": "45%" },
+      { "name": "MongoDB", "level": "50%" },
+      { "name": "SQL", "level": "50%" }
+    ],
+    "skills_tags_titles": {
+      "title_1": "Tools that I have used in my life",
+      "lvl_1": "Advanced",
+      "lvl_2": "Intermediate",
+      "lvl_3": "Hobby"
+    },
+    "skills_tags": {
+      "advanced": [{ "name": "Node.js" }],
+      "intermediate": [
+        { "name": "TypeScript" },
+        { "name": "Angular (and AngularJS)" },
+        { "name": "React" },
+        { "name": "Vue" },
+        { "name": "PHP" },
+        { "name": "Cpanel" },
+        { "name": "Firebase (firestore)" },
+        { "name": "Google Cloud (datastore)" },
+        { "name": "SQL" },
+        { "name": "DevOps" },
+        { "name": "C#" },
+        { "name": "Heroku" },
+        { "name": "Java" }
+      ],
+      "hobby": [
+        { "name": "Shell" },
+        { "name": "MS-DOS" },
+        { "name": "Powershell" },
+        { "name": "Travis CI" },
+        { "name": "npm (own package)" },
+        { "name": "Azure" },
+        { "name": "DevOps" },
+        { "name": "Visual Basic" },
+        { "name": "Pixel Art" },
+        { "name": "Game Maker" },
+        { "name": "Adobe Premiere" },
+        { "name": "Adobe Photoshop" },
+        { "name": "Adobe Illustrator" },
+        { "name": "Ionic" },
+        { "name": "Vsce Market (own snippets)" },
+        { "name": "Go" },
+        { "name": "Svelte" },
+        { "name": "Markdown" }
+      ]
+    }
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "canadian-wanderlust.jpg",
+        "url": "https://www.canadianwanderlust.com"
+      },
+      {
+        "title": "Fury Fighting Gear",
+        "category": "(offline now) A fighting gear company I started",
+        "image": "fury-fighting-gear.jpg",
+        "url": "http://www.timbakerdev.com"
+      },
+      {
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "original-thai-food.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title": "Resume Website",
+        "category": "A React based resume website template",
+        "image": "resume-website.jpg",
+        "url": "http://www.timbakerdev.com"
+      },
+      {
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "smirkspace.jpg",
+        "url": "http://www.smirkspace.com"
+      }
+    ]
+  }
+}

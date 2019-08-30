@@ -1,0 +1,188 @@
+﻿
+#resume {
+  background: #fff;
+  padding-top: 90px;
+  padding-bottom: 72px;
+  overflow: hidden;
+}
+
+* {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+#resume a { color: rgb(244, 245, 244); }
+#resume a:hover, #resume a:focus { color: #313131; }
+
+#resume h1 {
+  font: 18px/24px 'Lexend Deca', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#resume h1 span {
+  border-bottom: 3px solid #11ABB0;
+  padding-bottom: 6px;
+}
+#resume h3 {
+  font: 25px/30px 'Lexend Deca', sans-serif;
+}
+
+#resume .header-col { padding-top: 9px; padding-bottom: 20px;}
+#resume .main-col { padding-right: 10%; }
+
+.education, .work {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E8E8E8;
+}
+#resume .info {
+  font: 16px/24px 'Libre Baskerville', serif;
+  font-style: italic;
+  color: #6E7881;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+#resume .info span {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+#resume .date {
+  font: 15px/24px 'Libre Baskerville', sans-serif;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+
+/*----------------------------------------------*/
+/*	Skill Bars
+/*----------------------------------------------*/
+
+.bars {
+	width: 95%;
+	float: left;
+	padding: 0;
+	text-align: left;
+}
+.bars .skills {
+  	margin-top: 36px;
+   list-style: none;
+}
+.bars li {
+   position: relative;
+  	margin-bottom: 60px;
+  	background: #ccc;
+  	height: 42px;
+  	border-radius: 3px;
+}
+.bars li em {
+	font: 15px 'Lexend Deca', sans-serif;
+   color: #313131;
+	text-transform: uppercase;
+   letter-spacing: 2px;
+	font-weight: normal;
+   position: relative;
+	top: -36px;
+}
+.bar-expand {
+   position: absolute;
+   left: 0;
+   top: 0;
+
+   margin: 0;
+   padding-right: 24px;
+  	background: #313131;
+   display: inline-block;
+  	height: 42px;
+   line-height: 42px;
+   border-radius: 3px 0 0 3px;
+}
+
+body {
+  font: 12px/1.5 'PT Sans', serif;
+  margin: 25px;
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.tags li {
+  float: left; 
+}
+
+.tag {
+  // color fondo tag
+  
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag a { color: rgb(156, 163, 163); }
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  //fondo del triangulo
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  // punta triangular
+  
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag_1 {
+  background: #11ABB0;
+}
+
+.tag_1::after {
+  border-left: 10px solid #11ABB0;
+}
+
+.tag_2 {
+  background: rgb(32, 126, 202);
+}
+
+.tag_2::after {
+  border-left: 10px solid  rgb(32, 126, 202);
+}
+
+.tag_3 {
+  background: rgb(243, 203, 27);
+}
+
+.tag_3::after {
+  border-left: 10px solid rgb(243, 203, 27);
+}
+
+// .tag:hover {
+//   background-color: crimson;
+//   color: white;
+// }
+
+// .tag:hover::after {
+//    border-left-color: crimson; 
+// }
