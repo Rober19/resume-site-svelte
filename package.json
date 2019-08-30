@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@hapi/joi": "^15.1.1",
+    "ajv": "^6.10.2",
     "amanda": "^1.0.1",
     "celebrate": "^10.0.1",
     "joi": "^14.3.1",

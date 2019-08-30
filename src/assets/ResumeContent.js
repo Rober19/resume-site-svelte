@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import amanda from 'amanda';
+import Ajv from 'ajv';
 import schema from './Schema.json';
 import spanish from './spanish_content.json';
 import english from './english_content.json';
@@ -8,15 +8,16 @@ import english from './english_content.json';
 SchemaValidator(spanish, schema);
 SchemaValidator(english, schema);
 
-function SchemaValidator(source, schema) {
-  // Initialize a JSON Schema validator.  
-  let validator = amanda('json');
-  validator.validate(source, schema, error => {
-    if (error) {
-      alert(error);
-      console.trace(error);
+function SchemaValidator(data, schema) {
+  var ajv = new Ajv(); // options can be passed, e.g. {allErrors: true}
+  var validate = ajv.compile(schema);
+  var valid = validate(data);
+  if (!valid) {
+    for (const err of validate.errors) {
+      console.error(err.message);
+      console.table(err);
     }
-  });
+  }
 }
 
 // Spanish is default content
