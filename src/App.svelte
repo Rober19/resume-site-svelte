@@ -7,7 +7,7 @@
   import Presentation from "./components/presentation/Presentation.svelte";
 </script>
 
-<!-- <style src="./App.scss"></style> -->
+<style src="./App.scss"></style>
 
 <div>
   <!-- <Header /> -->

@@ -1,6 +1,9 @@
 <script>
+  import { onMount } from "svelte";
   import { content_app, db_content } from "../../assets/ResumeContent";
-  
+  import { fade } from "svelte/transition";
+
+  let CardAnimationOnLoad = false;
 
   const {
     name,
@@ -17,6 +20,12 @@
   const { city, state, country, zip, street } = address;
 
   const profilepic = "images/" + image;
+
+  onMount(async () => {
+    setTimeout(() => {
+      CardAnimationOnLoad = true;
+    }, 300);
+  });
 
   // let messageBox = document.querySelector(".js-message");
   // let btn = document.querySelector(".js-message-btn");
@@ -35,8 +44,6 @@
   //     card.classList.remove("active");
   //   });
   // });
-
-
 </script>
 
 <style src="./Presentation.scss">
@@ -45,91 +52,105 @@
 
 <div class="wrapper">
 
-  <div class="profile-card js-profile-card">
-    <div class="profile-card__img">
-      <img alt="Image" src={profilepic}  />
-    </div>
-
-    <div class="profile-card__cnt js-profile-cnt">
-      <div class="profile-card__name">{name}</div>
-      <div class="profile-card__txt">
-        {$db_content.main.occupation} {$db_content.main.word_at} <strong>{$db_content.main.work_at}</strong>
-      </div>
-      <div class="profile-card-loc">
-        <span class="profile-card-loc__icon">
-          <svg class="icon">
-            <use xlink:href="#icon-location" />
-          </svg>
-        </span>
-
-        <span class="profile-card-loc__txt">{city}, {country}</span>
+  {#if CardAnimationOnLoad}
+    <div class="profile-card js-profile-card" transition:fade>
+      <div class="profile-card__img">
+        <img alt="Image" src={profilepic} />
       </div>
 
-      <div class="profile-card-inf" style="display: none">
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">1598</div>
-          <div class="profile-card-inf__txt">Followers</div>
+      <div class="profile-card__cnt js-profile-cnt">
+        <div class="profile-card__name">{name}</div>
+        <div class="profile-card__txt">
+          {$db_content.main.occupation} {$db_content.main.word_at}
+          <strong>{$db_content.main.work_at}</strong>
+        </div>
+        <div class="profile-card-loc">
+          <span class="profile-card-loc__icon">
+            <svg class="icon">
+              <use xlink:href="#icon-location" />
+            </svg>
+          </span>
+
+          <span class="profile-card-loc__txt">{city}, {country}</span>
         </div>
 
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">65</div>
-          <div class="profile-card-inf__txt">Following</div>
+        <div class="profile-card-inf" style="display: none">
+          <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title">1598</div>
+            <div class="profile-card-inf__txt">Followers</div>
+          </div>
+
+          <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title">65</div>
+            <div class="profile-card-inf__txt">Following</div>
+          </div>
+
+          <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title">123</div>
+            <div class="profile-card-inf__txt">Articles</div>
+          </div>
+
+          <div class="profile-card-inf__item ">
+            <div class="profile-card-inf__title">85</div>
+            <div class="profile-card-inf__txt">Works</div>
+          </div>
         </div>
 
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title">123</div>
-          <div class="profile-card-inf__txt">Articles</div>
+        <div class="profile-card-social">
+
+          {#each social as { name, className, url, icon, iconclass }}
+            <a
+              href={url}
+              class={className}
+              target="_blank"
+              aria-label="123"
+              rel="noreferrer">
+              <span class="icon-font">
+                <svg class="icon">
+                  <use xlink:href={icon} />
+                </svg>
+              </span>
+            </a>
+          {/each}
+
         </div>
 
-        <div class="profile-card-inf__item ">
-          <div class="profile-card-inf__title">85</div>
-          <div class="profile-card-inf__txt">Works</div>
-        </div>
-      </div>
-
-      <div class="profile-card-social">
-
-        {#each social as { name, className, url, icon, iconclass }}
-          <a href={url} class={className} target="_blank" aria-label="123" rel="noreferrer">
-            <span class="icon-font">
-              <svg class="icon">
-                <use xlink:href={icon} />
-              </svg>
-            </span>
-          </a>
-        {/each}
-
-      </div>
-
-      <div class="profile-card-ctr" >
-        <button class="profile-card__button button--blue js-message-btn" on:click={db_content.useEsp}>
-          Español
-        </button>
-        <button class="profile-card__button button--orange"  on:click={db_content.useEng}>English</button>
-      </div>
-    </div>
-
-    <div class="profile-card-message js-message" style="display: none">
-      <form class="profile-card-form">
-        <div class="profile-card-form__container">
-          <textarea placeholder="Say something..." />
-        </div>
-
-        <div class="profile-card-form__bottom">
-          <button class="profile-card__button button--blue js-message-close">
-            Send
+        <div class="profile-card-ctr">
+          <button
+            class="profile-card__button button--blue js-message-btn"
+            on:click={db_content.useEsp}>
+            Español
           </button>
-
-          <button class="profile-card__button button--gray js-message-close">
-            Cancel
+          <button
+            class="profile-card__button button--orange"
+            on:click={db_content.useEng}>
+            English
           </button>
         </div>
-      </form>
+      </div>
 
-      <div class="profile-card__overlay js-message-close" />
+      <div class="profile-card-message js-message" style="display: none">
+        <form class="profile-card-form">
+          <div class="profile-card-form__container">
+            <textarea placeholder="Say something..." />
+          </div>
+
+          <div class="profile-card-form__bottom">
+            <button class="profile-card__button button--blue js-message-close">
+              Send
+            </button>
+
+            <button class="profile-card__button button--gray js-message-close">
+              Cancel
+            </button>
+          </div>
+        </form>
+
+        <div class="profile-card__overlay js-message-close" />
+      </div>
+
     </div>
-
-  </div>
+  {/if}
 
 </div>
 
